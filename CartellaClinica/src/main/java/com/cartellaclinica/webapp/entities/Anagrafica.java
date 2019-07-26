@@ -15,54 +15,75 @@ public class Anagrafica implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "ID_ANAGRAFICA")
-	private int IdAnagrafica;
+	private Integer IdAnagrafica;
+
 	@Column(name = "COGNOME ")
 	private String Cognome;
+
 	@Column(name = "NOME ")
 	private String Nome;
+
 	@Column(name = "DT_NASCITA ")
 	private Date DataDiNascita;
+
 	@Column(name = "FK_COMUNE_NAS ")
-	private int FkComuneNas;
+	private Integer FkComuneNas;
+
 	@Column(name = "SESSO ")
 	private String Sesso;
+
 	@Column(name = "CODFISCALE_CALC ")
 	private String CodFiscaleCalc;
 
 	@Column(nullable = true, name = "INDIRIZZO_RES ")
 	private String IndirizzoRes;
+
 	@Column(nullable = true, name = "FK_COMUNE_RES ")
-	private int FkComuneRes;
+	private Integer FkComuneRes;
+
 	@Column(nullable = true, name = "INDIRIZZO_DOM ")
 	private String IndirizzoDom;
+
 	@Column(nullable = true, name = "FK_COMUNE_DOM ")
-	private int FkComuneDom;
+	private Integer FkComuneDom;
+
 	@Column(nullable = true, name = "TESS_SANITARIA")
 	private String TessSanitaria;
+
 	@Column(nullable = true, name = "TELEFONO_ABIT ")
 	private String TelefonoAbit;
+
 	@Column(nullable = true, name = "TELEFONO_CELL ")
 	private String TelefonoCell;
+
 	@Column(nullable = true, name = "TELEFONO_UFF ")
 	private String TelefonoUff;
+
 	@Column(nullable = true, name = "TELEFONO_FAX ")
 	private String TelefonoFax;
+
 	@Column(nullable = true, name = "FK_STATO_CIV")
-	private int FkStatoCiv;
+	private Integer FkStatoCiv;
+
 	@Column(nullable = true, name = "FK_TITOLO_STUDIO ")
-	private int FkTitoloStudio;
+	private Integer FkTitoloStudio;
+
 	@Column(nullable = true, name = "STP")
 	private String Stp;
+
 	@Column(nullable = true, name = "CODICE_STP ")
 	private String CodiceStp;
-	@Column(nullable = true, name = "CODICEFISCALE_FORZ ")
+
+	@Column(nullable = true, name = "CODFISCALE_FORZ ")
 	private String CodFiscaleForz;
+
 	@Column(nullable = true, name = "FLAG_CODFISC_FORZ")
 	private String FlagCodFiscForz;
+
 	@Column(nullable = true, name = "FLAG_ANNULLATO")
 	private String FlagAnnullato;
 
-	public int getIdAnagrafica() {
+	public Integer getIdAnagrafica() {
 		return IdAnagrafica;
 	}
 
@@ -126,7 +147,7 @@ public class Anagrafica implements Serializable {
 		IndirizzoRes = indirizzoRes;
 	}
 
-	public int getFkComuneRes() {
+	public Integer getFkComuneRes() {
 		return FkComuneRes;
 	}
 
@@ -142,7 +163,7 @@ public class Anagrafica implements Serializable {
 		IndirizzoDom = indirizzoDom;
 	}
 
-	public int getFkComuneDom() {
+	public Integer getFkComuneDom() {
 		return FkComuneDom;
 	}
 
@@ -190,7 +211,7 @@ public class Anagrafica implements Serializable {
 		TelefonoFax = telefonoFax;
 	}
 
-	public int getFkStatoCiv() {
+	public Integer getFkStatoCiv() {
 		return FkStatoCiv;
 	}
 
@@ -198,7 +219,7 @@ public class Anagrafica implements Serializable {
 		FkStatoCiv = fkStatoCiv;
 	}
 
-	public int getFkTitoloStudio() {
+	public Integer getFkTitoloStudio() {
 		return FkTitoloStudio;
 	}
 

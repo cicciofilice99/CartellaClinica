@@ -40,9 +40,9 @@
         				</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link" href="<spring:url value="/articoli/" /> ">
+        				<a class="nav-link" href="<spring:url value="/pazienti/" /> ">
         					<span class="oi oi-box" title="prodotti" aria-hidden="true"></span>
-        					Prodotti
+        					Pazienti
         				</a>
       				</li>
       				<li class="nav-item">
