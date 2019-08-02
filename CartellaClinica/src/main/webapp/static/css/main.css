@@ -201,7 +201,7 @@ card li {
 }
 
 .portlet.light.bordered>.portlet-title {
-	border-bottom: 1px solid #eef1f5;
+	border-bottom: 1px solid #eef1f5; 
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: rgb(238, 241, 245);
