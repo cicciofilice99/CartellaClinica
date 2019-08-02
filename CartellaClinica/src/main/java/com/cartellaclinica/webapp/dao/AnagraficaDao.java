@@ -9,4 +9,6 @@ public interface AnagraficaDao {
 	List<Anagrafica> SelTutti();
 
 	Anagrafica SelPazienteByFilter(Integer id);
+
+	List<Anagrafica> SelPazientiUltimiInseriti();
 }

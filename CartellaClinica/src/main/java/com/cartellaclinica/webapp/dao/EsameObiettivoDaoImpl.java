@@ -9,9 +9,10 @@ import com.cartellaclinica.webapp.entities.EsameObiettivo;
 @Repository
 public class EsameObiettivoDaoImpl extends AbstractDao<EsameObiettivo, Integer> implements EsameObiettivoDao {
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<EsameObiettivo> SelEsameObiettivoByFilter(Integer id) {
-		List<EsameObiettivo> retVal;
+		List<EsameObiettivo> retVal = null;
 
 		String JQPL = "SELECT e FROM EsameObiettivo e " + " INNER JOIN CartellaClinica cc "
 				+ " ON e.FkCartellaClinica = cc.IdCartella " + " INNER JOIN Anagrafica a "

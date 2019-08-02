@@ -26,4 +26,9 @@ public class AnagraficaServiceImpl implements AnagraficaService {
 		return anagraficaRepository.SelPazienteByFilter(id);
 	}
 
+	@Override
+	public List<Anagrafica> SelPazientiUltimiInseriti() {
+		return anagraficaRepository.SelPazientiUltimiInseriti();
+	}
+
 }

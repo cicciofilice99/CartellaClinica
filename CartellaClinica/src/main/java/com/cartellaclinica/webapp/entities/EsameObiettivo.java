@@ -15,11 +15,11 @@ public class EsameObiettivo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "ID_ESA_OBIETT")
-	private int IdEsameObiettivo;
+	private Integer IdEsameObiettivo;
 	@Column(name = "FK_CART_CLIN")
-	private int FkCartellaClinica;
+	private Integer FkCartellaClinica;
 	@Column(nullable = true, name = "FK_REPARTO")
-	private int FkReparto;
+	private Integer FkReparto;
 	@Column(nullable = true, name = "DATA_ESAME_OB")
 	private Date DataEsameObiettivo;
 	@Column(nullable = true, name = "ESAME_OBIETTIVO_DESC")
@@ -33,15 +33,15 @@ public class EsameObiettivo implements Serializable {
 		return IdEsameObiettivo;
 	}
 
-	public void setIdEsameObiettivo(int idEsameObiettivo) {
+	public void setIdEsameObiettivo(Integer idEsameObiettivo) {
 		IdEsameObiettivo = idEsameObiettivo;
 	}
 
-	public int getFkCartellaClinica() {
+	public Integer getFkCartellaClinica() {
 		return FkCartellaClinica;
 	}
 
-	public void setFkCartellaClinica(int fkCartellaClinica) {
+	public void setFkCartellaClinica(Integer fkCartellaClinica) {
 		FkCartellaClinica = fkCartellaClinica;
 	}
 
@@ -49,7 +49,7 @@ public class EsameObiettivo implements Serializable {
 		return FkReparto;
 	}
 
-	public void setFkReparto(int fkReparto) {
+	public void setFkReparto(Integer fkReparto) {
 		FkReparto = fkReparto;
 	}
 

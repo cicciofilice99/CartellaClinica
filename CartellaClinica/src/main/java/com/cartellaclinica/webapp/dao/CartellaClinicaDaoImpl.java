@@ -18,6 +18,7 @@ public class CartellaClinicaDaoImpl extends AbstractDao<CartellaClinica, Integer
 		return cartellaClinica;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<CartellaClinica> SelTutti() {
 		List<CartellaClinica> retVal;

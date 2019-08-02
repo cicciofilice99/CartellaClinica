@@ -12,12 +12,11 @@ public class AnamnesiDaoImpl extends AbstractDao<Anamnesi, Integer> implements A
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Anamnesi> SelAnamnesiByFilter(Integer id) {
-		List<Anamnesi> retVal;
-		String JQPL = "SELECT an FROM Anamnesi an " + " INNER JOIN CartellaClinica cc "
-				+ " ON cc.IdCartella == an.FkCartellaClinica" + " INNER JOIN Anagrafica a "
-				+ " ON a.IdAnagrafica = cc.FkAnagrafica " + "WHERE a.IdAnagrafica = :id";
-
-		retVal = entityManager.createQuery(JQPL).setParameter("id", id).getResultList();
+		List<Anamnesi> retVal = null;
+		String JQPL1 = "SELECT anamnesi FROM Anamnesi anamnesi " + "	INNER JOIN CartellaClinica cc "
+				+ "	ON cc.IdCartella = anamnesi.FkCartellaClinica" + "	INNER JOIN Anagrafica a "
+				+ "	ON a.IdAnagrafica = cc.FkAnagrafica" + "	WHERE a.IdAnagrafica = :id";
+		retVal = entityManager.createQuery(JQPL1).setParameter("id", id).getResultList();
 		return retVal;
 	}
 

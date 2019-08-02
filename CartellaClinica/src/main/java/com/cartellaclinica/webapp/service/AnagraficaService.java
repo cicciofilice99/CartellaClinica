@@ -9,4 +9,6 @@ public interface AnagraficaService {
 	List<Anagrafica> SelTutti();
 
 	Anagrafica SelPazienteByFilter(Integer id);
+
+	List<Anagrafica> SelPazientiUltimiInseriti();
 }

@@ -16,15 +16,15 @@ public class Anamnesi implements Serializable {
 
 	@Id
 	@Column(name = "ID_ANAMNESI")
-	private int IdAnamnesi;
+	private Integer IdAnamnesi;
 	@Column(name = "FK_CART_CLIN")
-	private int FkCartellaClinica;
+	private Integer FkCartellaClinica;
 	@Column(nullable = true, name = "DATA_ANAMNESI")
 	private Date DataAnamnesi;
 	@Column(nullable = true, name = "ANAMNESI_DESC_OLD")
 	private String AnamnesiDescOld;
 	@Column(nullable = true, name = "FK_REPARTO")
-	private int FkReparto;
+	private Integer FkReparto;
 	@Column(nullable = true, name = "PUBBLICA")
 	private String Pubblica;
 	@Column(nullable = true, name = "FLAG_ANNULLATO")
@@ -32,19 +32,26 @@ public class Anamnesi implements Serializable {
 	@Column(nullable = true, name = "ANAMNESI_DESC")
 	private Clob AnamnesiDesc;
 
-	public int getIdAnamnesi() {
+	@Override
+	public String toString() {
+		return "Anamnesi [IdAnamnesi=" + IdAnamnesi + ", FkCartellaClinica=" + FkCartellaClinica + ", DataAnamnesi="
+				+ DataAnamnesi + ", AnamnesiDescOld=" + AnamnesiDescOld + ", FkReparto=" + FkReparto + ", Pubblica="
+				+ Pubblica + ", FlagAnnullato=" + FlagAnnullato + ", AnamnesiDesc=" + AnamnesiDesc + "]";
+	}
+
+	public Integer getIdAnamnesi() {
 		return IdAnamnesi;
 	}
 
-	public void setIdAnamnesi(int idAnamnesi) {
+	public void setIdAnamnesi(Integer idAnamnesi) {
 		IdAnamnesi = idAnamnesi;
 	}
 
-	public int getFkCartellaClinica() {
+	public Integer getFkCartellaClinica() {
 		return FkCartellaClinica;
 	}
 
-	public void setFkCartellaClinica(int fkCartellaClinica) {
+	public void setFkCartellaClinica(Integer fkCartellaClinica) {
 		FkCartellaClinica = fkCartellaClinica;
 	}
 
@@ -64,11 +71,11 @@ public class Anamnesi implements Serializable {
 		AnamnesiDescOld = anamnesiDescOld;
 	}
 
-	public int getFkReparto() {
+	public Integer getFkReparto() {
 		return FkReparto;
 	}
 
-	public void setFkReparto(int fkReparto) {
+	public void setFkReparto(Integer fkReparto) {
 		FkReparto = fkReparto;
 	}
 

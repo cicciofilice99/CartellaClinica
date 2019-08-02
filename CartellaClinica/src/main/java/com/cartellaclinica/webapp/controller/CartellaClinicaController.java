@@ -34,20 +34,21 @@ public class CartellaClinicaController {
 	@Autowired
 	private AnamnesiService anamnesiService;
 
-	private List<CartellaClinica> recordSetCartella;
+	// private List<CartellaClinica> recordSetCartella;
 	private List<EsameObiettivo> recordSetEsameObiettivo;
 	private List<Anamnesi> recordSetAnamnesi;
 
 	@RequestMapping(value = "/{idAnagrafica}", method = RequestMethod.GET)
 	public String GetCartellaByFilter(@PathVariable("idAnagrafica") Integer idAnagrafica, Model model) {
 		CartellaClinica cc = null;
-		Anamnesi anamnesi = null;
-		EsameObiettivo esameObiettivo = null;
+//		Anamnesi anamnesi = null;
+//		EsameObiettivo esameObiettivo = null;
 		Anagrafica anagrafica = null;
 
 		anagrafica = anagraficaService.SelPazienteByFilter(idAnagrafica);
 
 		cc = cartellaClinicaService.SelCartellaClinicaPazienteByFilter(idAnagrafica);
+		// System.out.println("CARTELLA CLINICA " + cc.toString());
 		recordSetEsameObiettivo = esameObiettivoService.SelEsameObiettivoByFilter(idAnagrafica);
 		recordSetAnamnesi = anamnesiService.SelAnamnesiByFilter(idAnagrafica);
 

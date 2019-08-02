@@ -15,9 +15,9 @@ public class CartellaClinica implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "ID_CART_CLIN")
-	private int IdCartella;
+	private Integer IdCartella;
 	@Column(name = "FK_ANAGRAFICA")
-	private int FkAnagrafica;
+	private Integer FkAnagrafica;
 	@Column(nullable = true, name = "DATA_INIZIO_VAL")
 	private Date DataInizioVal;
 	@Column(nullable = true, name = "DATA_FINE_VAL")
@@ -31,19 +31,19 @@ public class CartellaClinica implements Serializable {
 	@Column(nullable = true, name = "FLAG_ANNULLATO")
 	private String FlagAnnullato;
 
-	public int getIdCartella() {
+	public Integer getIdCartella() {
 		return IdCartella;
 	}
 
-	public void setIdCartella(int idCartella) {
+	public void setIdCartella(Integer idCartella) {
 		IdCartella = idCartella;
 	}
 
-	public int getFkAnagrafica() {
+	public Integer getFkAnagrafica() {
 		return FkAnagrafica;
 	}
 
-	public void setFkAnagrafica(int fkAnagrafica) {
+	public void setFkAnagrafica(Integer fkAnagrafica) {
 		FkAnagrafica = fkAnagrafica;
 	}
 
@@ -102,4 +102,12 @@ public class CartellaClinica implements Serializable {
 	public CartellaClinica() {
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public String toString() {
+		return "CartellaClinica [IdCartella=" + IdCartella + ", FkAnagrafica=" + FkAnagrafica + ", DataInizioVal="
+				+ DataInizioVal + ", DataFineVal=" + DataFineVal + ", NoteCart=" + NoteCart + ", DataModifica="
+				+ DataModifica + ", StatoCartella=" + StatoCartella + ", FlagAnnullato=" + FlagAnnullato + "]";
+	}
+
 }
