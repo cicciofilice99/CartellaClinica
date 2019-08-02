@@ -1,5 +1,12 @@
 package com.cartellaclinica.webapp.dao;
 
-public class CartellaClinicaDao {
+import java.util.List;
 
+import com.cartellaclinica.webapp.entities.CartellaClinica;
+
+public interface CartellaClinicaDao {
+
+	List<CartellaClinica> SelTutti();
+
+	CartellaClinica SelCartellaClinicaPazienteByFilter(Integer id);
 }

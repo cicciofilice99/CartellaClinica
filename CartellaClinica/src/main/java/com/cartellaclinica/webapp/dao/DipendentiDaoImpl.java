@@ -1,5 +1,7 @@
 package com.cartellaclinica.webapp.dao;
 
-public class DipendentiDaoImpl {
+import org.springframework.stereotype.Repository;
 
+@Repository
+public class DipendentiDaoImpl {
 }

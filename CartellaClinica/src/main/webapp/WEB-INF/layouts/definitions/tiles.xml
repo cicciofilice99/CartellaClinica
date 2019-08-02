@@ -12,13 +12,18 @@
 	</definition>
 		
 	<definition name="index" extends="baseLayout">
-		<put-attribute name="titolo"  value="Benvenuti in AlphaShop" />
+		<put-attribute name="titolo"  value="Cartella Clinica Elettronica" />
 		<put-attribute name="content" value="/WEB-INF/view/welcome.jsp" />  
 	</definition>
 	
 	<definition name="pazienti" extends="baseLayout">
-		<put-attribute name="titolo"  value="Benvenuti in AlphaShop" />
+		<put-attribute name="titolo"  value="Cartella Clinica Elettronica" />
 		<put-attribute name="content" value="/WEB-INF/view/pazienti.jsp" />  
+	</definition>
+	
+	<definition name="cartellaClinica" extends="baseLayout">
+		<put-attribute name="titolo"  value="Cartella Clinica Elettronica" />
+		<put-attribute name="content" value="/WEB-INF/view/cartellaClinica.jsp" />  
 	</definition>
 	
 </tiles-definitions>

@@ -50,7 +50,7 @@
 						<td>${paziente.dataDiNascita}</td>
 						<td>${paziente.sesso}</td>
 						<td>
-							<a href=" <spring:url value="/pazienti/dettagliCC/${paziente.idAnagrafica}" /> " class="btn btn-primary">
+							<a href=" <spring:url value="/cartellaclinica/${paziente.idAnagrafica}" /> " class="btn btn-primary">
 								<span class="oi oi-folder"/></span> 
       						</a> 
       					</td>

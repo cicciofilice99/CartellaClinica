@@ -21,4 +21,9 @@ public class AnagraficaServiceImpl implements AnagraficaService {
 		return anagraficaRepository.SelTutti();
 	}
 
+	@Override
+	public Anagrafica SelPazienteByFilter(Integer id) {
+		return anagraficaRepository.SelPazienteByFilter(id);
+	}
+
 }

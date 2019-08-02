@@ -1,5 +1,5 @@
 package com.cartellaclinica.webapp.service;
 
-public class OperatoriService {
+public interface OperatoriService {
 
 }

@@ -1,5 +1,7 @@
 package com.cartellaclinica.webapp.dao;
 
-public class DipendentiDao {
+import java.util.List;
 
+public interface DipendentiDao {
+	List<DipendentiDao> SelTutti();
 }

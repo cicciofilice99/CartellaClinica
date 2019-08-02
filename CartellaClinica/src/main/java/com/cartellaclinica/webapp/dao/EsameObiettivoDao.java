@@ -1,5 +1,11 @@
 package com.cartellaclinica.webapp.dao;
 
-public class EsameObiettivoDao {
+import java.util.List;
 
+import com.cartellaclinica.webapp.entities.EsameObiettivo;
+
+public interface EsameObiettivoDao {
+	List<EsameObiettivo> SelTutti();
+
+	List<EsameObiettivo> SelEsameObiettivoByFilter(Integer id);
 }

@@ -1,5 +1,9 @@
 package com.cartellaclinica.webapp.dao;
 
-public class RuoliDao {
+import java.util.List;
 
+import com.cartellaclinica.webapp.entities.Ruoli;
+
+public interface RuoliDao {
+	List<Ruoli> SelTutti();
 }

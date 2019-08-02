@@ -30,7 +30,7 @@
   		</button>
   		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
   		
-  			 <a class="navbar-brand" href="<spring:url value="/"/>">Alpha Shop</a>
+  			 <a class="navbar-brand" href="<spring:url value="/"/>">CCE</a>
   			     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       				<li class="nav-item active">
         				<a class="nav-link" href="<spring:url value="/"/>">
@@ -41,49 +41,29 @@
       				</li>
       				<li class="nav-item">
         				<a class="nav-link" href="<spring:url value="/pazienti/" /> ">
-        					<span class="oi oi-box" title="prodotti" aria-hidden="true"></span>
+        					<span class="oi oi-people" title="pazienti" aria-hidden="true"></span>
         					Pazienti
         				</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link" href="#">
-        					<span class="oi oi-bullhorn" title="promozioni" aria-hidden="true"></span>
-        					Promozioni
-        				</a>
-      				</li>
-      				<li class="nav-item">
-        				<a class="nav-link" href="#">
-        					<span class="oi oi-credit-card" title="punti" aria-hidden="true"></span>
-        					Punti
-        				</a>
-      				</li>
-      				<li class="nav-item">
-        				<a class="nav-link" href="<spring:url value="/clienti/" /> ">
-        					<span class="oi oi-people" title="clienti" aria-hidden="true"></span>
-        					<span class="badge"></span>
-        					Clienti 
-        				</a>
-      				</li>
-      				<li class="nav-item">
-        				<a class="nav-link" href="#">
-        					<span class="oi oi-cart" title="ordini" aria-hidden="true"></span>
-        					<span class="badge"></span>
-        					Ordini
+        				<a class="nav-link" href="<spring:url value="/cartellaClinica/" /> ">
+        					<span class="oi oi-box" title="cartellaClinica" aria-hidden="true"></span>
+        					Cartella Clinica
         				</a>
       				</li>
     			</ul>
     			
     			<!-- Search Box -->
     			<c:choose>
-    				<c:when test = "${IsClienti}">
-		    			<form:form class="form-inline my-2 my-lg-0" id="search" role="search" method="GET" action="/alphashop/clienti/search">
-		      				<input type="text" onClick="this.select();"  class="form-control mr-sm-2" name="filter" value="${filter}" placeholder="Cerca Clienti">
+    				<c:when test = "${IsPaziente}">
+		    			<form:form class="form-inline my-2 my-lg-0" id="search" role="search" method="GET" action="/CartellaClinica/pazienti/search">
+		      				<input type="text" onClick="this.select();"  class="form-control mr-sm-2" name="filter" value="${filter}" placeholder="Cerca Paziente">
 		      				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
 		    			</form:form>
 	    			</c:when>
-	    			<c:when test = "${IsArticoli}">
-		    			<form:form class="form-inline my-2 my-lg-0" id="search" role="search" method="GET" action="/alphashop/articoli/search">
-		      				<input type="text" onClick="this.select();"  class="form-control mr-sm-2" name="filter" value="${filter}" placeholder="Cerca Articoli">
+	    			<c:when test = "${IsCartellaClinica}">
+		    			<form:form class="form-inline my-2 my-lg-0" id="search" role="search" method="GET" action="/CartellaClinica/cartellaclinica/search">
+		      				<input type="text" onClick="this.select();"  class="form-control mr-sm-2" name="filter" value="${filter}" placeholder="Cerca Cartella Clinica">
 		      				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
 		    			</form:form>
 	    			</c:when>
